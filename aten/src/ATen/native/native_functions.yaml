@@ -4665,7 +4665,8 @@
 - func: dequantize.self(Tensor self) -> Tensor
   variants: function, method
   dispatch:
-    QuantizedCPU, QuantizedCUDA: dequantize_quant
+    CPU: dequantize_cpu
+    QuantizedCPU, QuantizedCUDA: dequantize_quantized_cpu
 
 - func: dequantize.tensors(Tensor[] tensors) -> Tensor[]
   variants: function
